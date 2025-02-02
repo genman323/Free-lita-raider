@@ -1,8 +1,10 @@
 <h2 align="center" style="font-family: 'Arial', sans-serif; color: #333;">Introducing Lita Raider - Free Version</h2>
+
 <p align="center" style="font-size: 16px;">
+  
   Check out our <a href="https://getlita.xyz/" style="color: #0066cc;">official store</a> for the latest updates.  
-  Join us on <a href="https://discord.gg/x5aj3d3CFg" style="color: #0066cc;">Discord</a> and don't miss out!  
-  Catch us on <a href="https://www.youtube.com/@valdemarkid" style="color: #0066cc;">YouTube</a> for more info.
+  Join us on <a href="https://discord.gg/pmrrnXhUQg" style="color: #0066cc;">Discord</a> and don't miss out!  
+  Catch us on <a href="https://www.youtube.com/@litaprojects" style="color: #0066cc;">YouTube</a> for more info.
 </p>
 
 <p align="center" style="font-size: 18px; font-weight: bold;">
