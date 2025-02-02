@@ -17,5 +17,5 @@
 
 <h2 align="center" style="font-family: 'Arial', sans-serif; color: #333;">Disclaimer</h2>
 <p style="font-size: 16px; color: #666; text-align: center;">
-  This tool is designed solely for educational purposes and ethical testing. The creator cannot be held responsible for any damage, legal violations, or misuse resulting from the tool. Users are fully accountable for their actions.
+By using this tool, you acknowledge and agree that any actions taken using this software are solely your responsibility. The creator of this tool holds no liability for any consequences, damages, bans, or legal issues that arise from its use. You assume full responsibility for any and all actions performed. Use at your own risk.
 </p>
