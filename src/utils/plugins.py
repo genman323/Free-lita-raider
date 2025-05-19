@@ -56,11 +56,16 @@ class Free:
             ]
 
         ascii_art = fr"""
-{theme_colors[0]}                                               ▄▄▌  ▪  ▄▄▄▄▄ ▄▄▄·  {theme_colors[4]}[{WHITE}TYPE{theme_colors[4]}] {WHITE}> FREE
-{theme_colors[1]}                                               ██•  ██ •██  ▐█ ▀█
-{theme_colors[2]}                                               ██▪  ▐█· ▐█.▪▄█▀▀█  {theme_colors[4]}[{WHITE}X{theme_colors[4]}] {WHITE}EXIT
-{theme_colors[3]}                                               ▐█▌▐▌▐█▌ ▐█▌·▐█ ▪▐▌ {theme_colors[4]}[{WHITE}?{theme_colors[4]}] {WHITE}DISCORD
-{theme_colors[4]}                                               .▀▀▀ ▀▀▀ ▀▀▀  ▀  ▀  {theme_colors[4]}[{WHITE}#{theme_colors[4]}] {WHITE}WEBSITE{RESET}"""
+{theme_colors[0]}                                                                                                                                                                     
+{theme_colors[1]}                                               
+{theme_colors[2]}                         ░██████╗███████╗██████╗░███████╗███╗░░██╗██╗████████╗██╗░░░██╗
+                                          ██╔════╝██╔════╝██╔══██╗██╔════╝████╗░██║██║╚══██╔══╝╚██╗░██╔╝
+                                          ╚█████╗░█████╗░░██████╔╝█████╗░░██╔██╗██║██║░░░██║░░░░╚████╔╝░
+                                           ╚═══██╗██╔══╝░░██╔══██╗██╔══╝░░██║╚████║██║░░░██║░░░░░╚██╔╝░░
+                                          ██████╔╝███████╗██║░░██║███████╗██║░╚███║██║░░░██║░░░░░░██║░░░
+                                          ╚═════╝░╚══════╝╚═╝░░╚═╝╚══════╝╚═╝░░╚══╝╚═╝░░░╚═╝░░░░░░╚═╝░░░                                                                                                      
+{theme_colors[3]}                                                                                                     
+{theme_colors[4]}                                                                                                     
         
         print(ascii_art)
 
