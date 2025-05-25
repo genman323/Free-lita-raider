@@ -30,13 +30,7 @@ class Free:
     def exit(self):
         sys.exit()
 
-    def discord(self):
-        webbrowser.open("https://discord.gg/R7ppWY83ak")
-        os.system('cls' if os.name == 'nt' else 'clear')
-
-    def website(self):
-        webbrowser.open("https://getlita.xyz")
-        os.system('cls' if os.name == 'nt' else 'clear')
+  
 
     def run_task_in_thread(self, task):
         task_thread = threading.Thread(target=task)
@@ -61,10 +55,10 @@ class Free:
 
         if self.nofile:
             print()
-            print(f"                        {Fore.RED}[{WHITE}LITA{Fore.RED}] {WHITE}| {Fore.RED}[{WHITE}'input/tokens.txt' Not Found!{Fore.RED}]{RESET}")
+            print(f"                        {Fore.RED}[{WHITE}SERENITY{Fore.RED}] {WHITE}| {Fore.RED}[{WHITE}'input/tokens.txt' Not Found!{Fore.RED}]{RESET}")
         elif self.notokens:
             print()
-            print(f"                        {Fore.RED}[{WHITE}LITA{Fore.RED}] {WHITE}| {Fore.RED}[{WHITE}No Tokens Found in 'input/tokens.txt'{Fore.RED}]{RESET}")
+            print(f"                        {Fore.RED}[{WHITE}SERENITY{Fore.RED}] {WHITE}| {Fore.RED}[{WHITE}No Tokens Found in 'input/tokens.txt'{Fore.RED}]{RESET}")
 
         print("\n")
         options = f"""                                                
