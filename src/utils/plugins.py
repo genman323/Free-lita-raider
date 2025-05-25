@@ -3,10 +3,13 @@ import sys
 import threading
 import os
 from colorama import Fore, Style, init
-init()
+
+# Initialize colorama
+init(autoreset=True)
 
 WHITE = Fore.WHITE
 RESET = Style.RESET_ALL
+
 
 class Free:
     def __init__(self):
@@ -18,11 +21,7 @@ class Free:
         try:
             with open("input/tokens.txt", "r") as f:
                 tokens = [token.strip() for token in f if token.strip()]
-
-            if not tokens:
-                self.notokens = True
-            else:
-                self.notokens = False
+            self.notokens = not bool(tokens)
             return tokens
         except FileNotFoundError:
             self.nofile = True
@@ -33,17 +32,20 @@ class Free:
 
     def discord(self):
         webbrowser.open("https://discord.gg/R7ppWY83ak")
-        os.system('cls')
+        os.system('cls' if os.name == 'nt' else 'clear')
 
     def website(self):
         webbrowser.open("https://getlita.xyz")
-        os.system('cls')
+        os.system('cls' if os.name == 'nt' else 'clear')
 
     def run_task_in_thread(self, task):
         task_thread = threading.Thread(target=task)
         task_thread.start()
         task_thread.join()
         self.optionsascii([])
+
+    def format_option(self, code, label, color):
+        return f"{color}[{WHITE}{code}{color}] {WHITE}{label}"
 
     def optionsascii(self, theme_colors):
         if not theme_colors or len(theme_colors) < 5:
@@ -58,22 +60,28 @@ class Free:
         ascii_art = fr"""
 {theme_colors[0]}                                                                                                   
 {theme_colors[1]}                                              
-{theme_colors[2]}                                  
+{theme_colors[2]}               ░██████╗███████╗██████╗░███████╗███╗░░██╗██╗████████╗██╗░░░██╗
+                                ██╔════╝██╔════╝██╔══██╗██╔════╝████╗░██║██║╚══██╔══╝╚██╗░██╔╝
+                                ╚█████╗░█████╗░░██████╔╝█████╗░░██╔██╗██║██║░░░██║░░░░╚████╔╝░
+                                ░╚═══██╗██╔══╝░░██╔══██╗██╔══╝░░██║╚████║██║░░░██║░░░░░╚██╔╝░░
+                                ██████╔╝███████╗██║░░██║███████╗██║░╚███║██║░░░██║░░░░░░██║░░░
+                                ╚═════╝░╚══════╝╚═╝░░╚═╝╚══════╝╚═╝░░╚══╝╚═╝░░░╚═╝░░░░░░╚═╝░░░
 {theme_colors[3]}                                                                                                   
 {theme_colors[4]}                                                                                                                                                                                                  
-        
+"""
         print(ascii_art)
 
         if self.nofile:
-            print("")
-            print(fr"                        {Fore.RED}[{WHITE}LITA{Fore.RED}] {WHITE}| {Fore.RED}[{WHITE}'Input/Tokens.txt' Not Found!{Fore.RED}]{Fore.RED}")
+            print()
+            print(f"                        {Fore.RED}[{WHITE}LITA{Fore.RED}] {WHITE}| {Fore.RED}[{WHITE}'input/tokens.txt' Not Found!{Fore.RED}]{RESET}")
         elif self.notokens:
-            print("")
-            print(f"                        {Fore.RED}[{WHITE}LITA{Fore.RED}] {WHITE}| {Fore.RED}[{WHITE}No Tokens Found in 'Input/Tokens.txt'{Fore.RED}]{Fore.RED}")
+            print()
+            print(f"                        {Fore.RED}[{WHITE}LITA{Fore.RED}] {WHITE}| {Fore.RED}[{WHITE}No Tokens Found in 'input/tokens.txt'{Fore.RED}]{RESET}")
 
-        options = fr"""                                                
-                        {theme_colors[4]}[{WHITE}01{theme_colors[4]}] {WHITE}Channel Spammer    {theme_colors[4]}[{WHITE}04{theme_colors[4]}] {WHITE}Reply Spammer        {theme_colors[4]}[{WHITE}07{theme_colors[4]}] {WHITE}Reaction Bomber
-                        {theme_colors[4]}[{WHITE}02{theme_colors[4]}] {WHITE}Name Switcher      {theme_colors[4]}[{WHITE}05{theme_colors[4]}] {WHITE}Pronouns Switcher    {theme_colors[4]}[{WHITE}08{theme_colors[4]}] {WHITE}Bio Switcher
-                        {theme_colors[4]}[{WHITE}03{theme_colors[4]}] {WHITE}Token Checker      {theme_colors[4]}[{WHITE}06{theme_colors[4]}] {WHITE}Thread Bomber        {theme_colors[4]}[{WHITE}09{theme_colors[4]}] {WHITE}Theme Changer"""
-        
+        print("\n")
+        options = f"""                                                
+                        {self.format_option('01', 'Channel Spammer', theme_colors[4])}    {self.format_option('04', 'Reply Spammer', theme_colors[4])}        {self.format_option('07', 'Reaction Bomber', theme_colors[4])}
+                        {self.format_option('02', 'Name Switcher', theme_colors[4])}      {self.format_option('05', 'Pronouns Switcher', theme_colors[4])}    {self.format_option('08', 'Bio Switcher', theme_colors[4])}
+                        {self.format_option('03', 'Token Checker', theme_colors[4])}      {self.format_option('06', 'Thread Bomber', theme_colors[4])}        {self.format_option('09', 'Theme Changer', theme_colors[4])}
+"""
         print(options)
