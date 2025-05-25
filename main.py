@@ -48,7 +48,7 @@ class Raider:
             return self.get_theme_colors("purple")
 
     def save_theme(self, theme):
-        input(f"                        {self.maincolor}[{WHITE}LITA{self.maincolor}] {WHITE}| {self.maincolor}[{WHITE}PRESS ENTER TO CONTINUE...{self.maincolor}] {WHITE}>{self.maincolor} ")
+        input(f"                        {self.maincolor}[{WHITE}SERENITY{self.maincolor}] {WHITE}| {self.maincolor}[{WHITE}PRESS ENTER TO CONTINUE...{self.maincolor}] {WHITE}>{self.maincolor} ")
         with open(self.THEME_FILE, 'w') as file:
             json.dump({"theme": theme}, file, indent=4)
         self.theme_colors = self.get_theme_colors(theme)
@@ -69,18 +69,18 @@ class Raider:
 
     def theme_changer(self):
         print("")
-        theme = input(f"                        {self.maincolor}[{WHITE}LITA{self.maincolor}] {WHITE}| {self.maincolor}[{WHITE}violet, midnight, blood, forest, lime, ocean, peach{self.maincolor}] {WHITE}>{self.maincolor} ").strip().lower()
+        theme = input(f"                        {self.maincolor}[{WHITE}SERENITY{self.maincolor}] {WHITE}| {self.maincolor}[{WHITE}violet, midnight, blood, forest, lime, ocean, peach{self.maincolor}] {WHITE}>{self.maincolor} ").strip().lower()
         if theme in ["violet", "midnight", "blood", "forest", "lime", "ocean", "peach"]:
             self.save_theme(theme)
         else:
-            print(f"                        {self.maincolor}[{WHITE}LITA{self.maincolor}] {WHITE}| {self.maincolor}[{WHITE}INVALID OPTION{self.maincolor}]")
-            input(f"                        {self.maincolor}[{WHITE}LITA{self.maincolor}] {WHITE}| {self.maincolor}[{WHITE}PRESS ENTER TO CONTINUE...{self.maincolor}] {WHITE}>{self.maincolor} ")
+            print(f"                        {self.maincolor}[{WHITE}SERENITY{self.maincolor}] {WHITE}| {self.maincolor}[{WHITE}INVALID OPTION{self.maincolor}]")
+            input(f"                        {self.maincolor}[{WHITE}SERENITY{self.maincolor}] {WHITE}| {self.maincolor}[{WHITE}PRESS ENTER TO CONTINUE...{self.maincolor}] {WHITE}>{self.maincolor} ")
             os.system('cls')
 
     def main(self):
         while True:
             self.Free.optionsascii(self.theme_colors)
-            userinput = input(f"                        {self.maincolor}[{WHITE}LITA{self.maincolor}] {WHITE}| {self.maincolor}[{WHITE}INPUT{self.maincolor}] {WHITE}>{self.maincolor} ")
+            userinput = input(f"                        {self.maincolor}[{WHITE}SERENITY{self.maincolor}] {WHITE}| {self.maincolor}[{WHITE}INPUT{self.maincolor}] {WHITE}>{self.maincolor} ")
             
             options = {
                 "1": lambda: channel_spammer(self.tokens, self.maincolor),
@@ -111,8 +111,8 @@ class Raider:
                 options[userinput]()
             else:
                 print("")
-                print(f"                        {self.maincolor}[{WHITE}LITA{self.maincolor}] {WHITE}| {self.maincolor}[{WHITE}INVALID OPTION{self.maincolor}]")
-                input(f"                        {self.maincolor}[{WHITE}LITA{self.maincolor}] {WHITE}| {self.maincolor}[{WHITE}PRESS ENTER TO CONTINUE...{self.maincolor}] {WHITE}>{self.maincolor} ")
+                print(f"                        {self.maincolor}[{WHITE}SERENITY{self.maincolor}] {WHITE}| {self.maincolor}[{WHITE}INVALID OPTION{self.maincolor}]")
+                input(f"                        {self.maincolor}[{WHITE}SERENITY{self.maincolor}] {WHITE}| {self.maincolor}[{WHITE}PRESS ENTER TO CONTINUE...{self.maincolor}] {WHITE}>{self.maincolor} ")
                 os.system('cls')
 
 if __name__ == "__main__":
