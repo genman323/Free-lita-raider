@@ -57,12 +57,7 @@ class Free:
                 "\033[38;2;115;40;240m"
             ]
 
-        ascii_art = fr"""
-ascii_art = f"""
-"""
-                                                                                                                                                                                                 
-"""
-        print(ascii_art)
+
 
         if self.nofile:
             print()
